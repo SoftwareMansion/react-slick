@@ -1652,8 +1652,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          finalTargetSlide = animationTargetSlide;
 	        }
 	      }
-	    } else if (targetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
-	      currentSlide = this.state.slideCount - this.props.slidesToShow;
+	      // } else if (targetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
+	      //   currentSlide = this.state.slideCount - this.props.slidesToShow;
 	    } else {
 	      finalTargetSlide = animationTargetSlide;
 	    }
