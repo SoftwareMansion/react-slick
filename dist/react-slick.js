@@ -3628,7 +3628,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    var customProps = {
 	      currentSlide: this.props.currentSlide,
-	      slideCount: this.props.slideCount
+	      slideCount: this.props.slideCount,
+	      slidesToShow: this.props.slidesToShow
 	    };
 	    var prevArrow = void 0;
 
