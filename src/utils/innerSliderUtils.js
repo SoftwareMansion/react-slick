@@ -35,13 +35,13 @@ export const lazyEndIndex = spec => spec.currentSlide + slidesOnRight(spec) // e
 // may be compared with trackutils equivalents for betterment
 export const slidesOnLeft = spec => (
   spec.centerMode
-    ? Math.floor(spec.slidesToShow / 2) + (parseInt(spec.centerPadding) > 0 ? 1 : 0) 
+    ? Math.floor(spec.slidesToShow / 2) + (parseInt(spec.centerPadding) > 0 ? 1 : 0)
     : 0
 )
 
 // may be compared with trackutils equivalents for betterment
 export const slidesOnRight = spec => (
   spec.centerMode
-  ? Math.floor((spec.slidesToShow - 1) / 2) + 1 + (parseInt(spec.centerPadding) > 0 ? 1 : 0)
-  : spec.slidesToShow
+  ? Math.floor((spec.slidesToShow - 1) / 2) + 1 + (parseInt(spec.centerPadding) > 0 ? 1 : 0) + (spec.lazyLoadAdditional || 0)
+  : spec.slidesToShow + (spec.lazyLoadAdditional || 0)
 )
