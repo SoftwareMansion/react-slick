@@ -1652,8 +1652,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	          finalTargetSlide = animationTargetSlide;
 	        }
 	      }
-	      // } else if (targetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
-	      //   currentSlide = this.state.slideCount - this.props.slidesToShow;
+	    } else if (animationTargetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
+	      finalTargetSlide = this.state.slideCount - this.props.slidesToShow;
 	    } else {
 	      finalTargetSlide = animationTargetSlide;
 	    }
@@ -1855,7 +1855,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	// may be compared with trackutils equivalents for betterment
 	var slidesOnRight = exports.slidesOnRight = function slidesOnRight(spec) {
-	  return spec.centerMode ? Math.floor((spec.slidesToShow - 1) / 2) + 1 + (parseInt(spec.centerPadding) > 0 ? 1 : 0) : spec.slidesToShow;
+	  return spec.centerMode ? Math.floor((spec.slidesToShow - 1) / 2) + 1 + (parseInt(spec.centerPadding) > 0 ? 1 : 0) + (spec.lazyLoadAdditional || 0) : spec.slidesToShow + (spec.lazyLoadAdditional || 0);
 	};
 
 /***/ }),
