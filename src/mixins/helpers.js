@@ -246,8 +246,8 @@ var helpers = {
           finalTargetSlide = animationTargetSlide
         }
       }
-    // } else if (targetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
-    //   currentSlide = this.state.slideCount - this.props.slidesToShow;
+    } else if (animationTargetSlide > this.state.slideCount - this.props.slidesToShow && !this.props.infinite) {
+      finalTargetSlide = this.state.slideCount - this.props.slidesToShow;
     } else {
       finalTargetSlide = animationTargetSlide;
     }
